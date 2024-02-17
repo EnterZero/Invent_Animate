@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    /* var */
+    --colorBlack: #0e0e10;
+    --colorDarkGrey: #18181b;
+    --colorGrey: #1f1f23;
+    --colorLightGrey: #33333a;
+    --colorWhite: #efeff1;
+    --shadowBlack: 0 0 5px 3px var(--colorBlack);
+    /* font */
+    font-family: 'Montserrat', sans-serif;
+    color: var(--colorWhite);
+    font-size: 62.5%;
+    /* scroll */
+    scroll-behavior: smooth;
+}
+
+* {
+    /* reset */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* default */
+    background: var(--colorBlack);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--colorDarkGrey);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorGrey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--colorLightGrey);
+}
+
+/* ------- home ------- */
+#home {
+    height: 100vh;
+    background: var(--colorDarkGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home li {
+    list-style: none;
+}
+
+#home a {
+    color: var(--colorWhite);
+    text-decoration: none;
+}
+
+/* navMobile */
+#navMobile {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navMobile ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#navMobile li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navMobile a {
+    width: 100%;
+    text-align: center;
+}
+
+/* navDesktop */
+#navDesktop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navDesktop ul {
+    width: 100%;
+    height: 14px;
+    background: linear-gradient(90deg, var(--colorDarkGrey), var(--colorGrey), var(--colorDarkGrey));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navDesktop li {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navDesktop a {
+    width: 100%;
+    text-align: center;
+}
+
+#navDesktop a:hover {
+    border-bottom: 1px solid var(--colorWhite);
+}
+
+/* ------- releases ------- */
+#releases {
+    height: 100vh;
+    background: var(--colorDarkGrey);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#releases .card {
+    width: 80%;
+    height: 20%;
+    background: var(--colorGrey);
+    box-shadow: var(--shadowBlack);
+}
+
+.card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-bottom: 1px solid var(--colorBlack);
+}
+
+.card .albumText {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.albumText span {
+    color: var(--colorLightGrey);
+}
+
+.albumText .albumDescription {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.albumText i {
+    font-size: 2rem;
+}
+
+.albumText i:hover {
+    transform: scale(1.5);
+}
+
+/* ------- tour ------- */
+#tour {
+    height: 100vh;
+    background: var(--colorDarkGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#tour div {
+    width: 90%;
+    height: 90%;
+}
+
+#tour table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#tour thead {
+    background: var(--colorLightGrey);
+}
+
+#tour tr:nth-child(even) {
+    background: var(--colorGrey);
+}
+
+#tour th,
+#tour td {
+    padding: 10px;
+}
+
+#tour i {
+    font-size: 3rem;
+}
+
+#tour i:hover {
+    transform: scale(1.3);
+}
+
+/* ------- media ------- */
+#media {
+    height: 100vh;
+    background: var(--colorDarkGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#media .photo {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.photo img {
+    width: calc(50% - 5px);
+    height: calc(15% - 5px);
+    box-shadow: var(--shadowBlack);
+    object-fit: cover;
+}
+
+/* ------- shop ------- */
+#shop {
+    height: 95vh;
+    background: var(--colorDarkGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotation {
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--colorGrey);
+}
+
+.next {
+    right: 20%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 20%;
+    border-radius: 3px 0 0 3px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* end */
+footer {
+    height: 5vh;
+    background: var(--colorGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .social {
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ------- responsive ------- */
+
+/* mobile */
+@media screen and (max-width: 767px) {
+
+    /* menu toggle */
+    #navDesktop {
+        display: none;
+    }
+
+    /* tour */
+    #tour thead {
+        display: none;
+    }
+
+    #tour tbody,
+    #tour tr,
+    #tour th,
+    #tour td {
+        display: block;
+        padding: 10px;
+    }
+
+    #tour tr {
+        border-bottom: 1px solid var(--colorWhite);
+    }
+
+    #tour td {
+        text-align: left;
+    }
+
+    #tour td::before {
+        content: attr(data-label);
+        word-break: break-word;
+        display: block;
+        color: var(--colorLightGrey);
+        font-weight: bold;
+    }
+
+    /* shop */
+    #shop img {
+        width: 100%;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+
+    /* menu toggle */
+    #navMobile {
+        display: none;
+    }
+
+    /* releases */
+    #releases .card {
+        width: 40%;
+        height: 40%;
+    }
+
+    /* media */
+    .photo img {
+        width: calc(25% - 5px);
+        height: calc(33.33% - 5px);
+    }
+}
